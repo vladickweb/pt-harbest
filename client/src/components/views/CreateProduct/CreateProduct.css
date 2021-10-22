@@ -1,0 +1,11 @@
+.transparency {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 5rem;
+}
+
+.custom-form{
+    background-color: rgba(247, 249, 251, 1);
+    border: none;
+    padding-top: .7rem;
+    padding-bottom: .7rem;
+}

@@ -1,0 +1,25 @@
+@media (max-width: 770px){
+    .custom-height{
+        height: inherit;
+    }
+}
+
+body{
+    background-color: gray;
+}
+
+.text-bold{
+    font-weight: bold;
+}
+
+.custom-border-success{
+    border: .3rem solid green;
+}
+
+.custom-border-danger{
+    border: .3rem solid red
+}
+
+.custom-height{
+    height: 70vh;
+}
