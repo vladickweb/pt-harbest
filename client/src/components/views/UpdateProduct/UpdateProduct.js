@@ -42,12 +42,18 @@ export default function UpdateProduct(props) {
 					showConfirmButton: false,
 					timer: 1500
 				})
+				fetchProducts()
+				countProducts()
+				setPage(0)
+				countPages()
+				createPages()
+				history.push('/productos')
 				history.push('/productos')
 			})
 			.catch(err => console.log(err))
 	}
 
-	const removeProduct = (e) => {
+	const removeProduct = e => {
 		e.preventDefault()
 		productService
 			.delete(id)
@@ -59,9 +65,9 @@ export default function UpdateProduct(props) {
 					showConfirmButton: false,
 					timer: 1500
 				})
+				fetchProducts()
 				countProducts()
 				setPage(0)
-				fetchProducts()
 				countPages()
 				createPages()
 				history.push('/productos')
@@ -163,7 +169,7 @@ export default function UpdateProduct(props) {
 										<button type='submit' className='btn btn-primary mb-4'>
 											Confirmar
 										</button>
-										<button className='btn btn-danger mb-4' onClick={(e) => removeProduct(e)}>
+										<button className='btn btn-danger mb-4' onClick={e => removeProduct(e)}>
 											Eliminar
 										</button>
 										<button className='btn btn-dark' onClick={() => history.push('/productos')}>
